@@ -21,15 +21,6 @@ void rev_string(char *s)
         char temp = s[i];
         s[i] = s[length - 1 - i];
         s[length - 1 - i] = temp;
-    }
-}
+   }
 
-int main()
-{
-    char str[] = "Hello, world!";
-    printf("Original string: %s\n", str);
-    rev_string(str);
-    printf("Reversed string: %s\n", str);
-    return 0;
 }
-
