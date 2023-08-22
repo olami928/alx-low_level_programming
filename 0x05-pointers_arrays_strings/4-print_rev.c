@@ -21,11 +21,3 @@ void print_rev(char *s)
 		putchar('\n');
 }
 
-int main(void)
-{
-	char myString[] = "Hello, world!";
-
-	print_rev(myString);
-	return (0);
-}
-

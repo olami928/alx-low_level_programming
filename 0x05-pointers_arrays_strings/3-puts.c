@@ -20,12 +20,3 @@ void _puts(char *str)
 	}
 	write(1, "\n", 1);
 }
-
-int main(void)
-{
-	char myString[] = "Hello, world!";
-
-	_puts(myString);
-	return (0);
-}
-
