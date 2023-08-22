@@ -25,13 +25,3 @@ void print_rev(char *s)
     _putchar('\n');
 }
 
-/**
- * _putchar - Prints a character to the standard output
- * @c: The character to be printed
- * Return: On success, returns the character that was printed
- */
-int _putchar(char c)
-{
-    return write(1, &c, 1);
-}
-
