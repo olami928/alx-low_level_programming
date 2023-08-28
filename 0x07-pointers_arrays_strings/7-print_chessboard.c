@@ -1,6 +1,6 @@
 #include "main.h"
+#include <stdio.h>
 
-#include "holberton.h"
 /**
  * print_chessboard - print a chessboard.
  * @a: source matrix
