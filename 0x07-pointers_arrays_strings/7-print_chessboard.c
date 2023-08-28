@@ -4,20 +4,19 @@
 /**
  * print_chessboard - print a chessboard.
  * @a: source matrix
- *
- *
  * Return: chessboard.
  */
 void print_chessboard(char (*a)[8])
 {
-	int i, j;
+	unsigned int i, b;
 
-	for (i = 0; i <= 7; i++)
+	for (i = 0 ; i < 8 ; i++)
 	{
-		for (j = 0; j <= 7; j++)
+		for (b = 0 ; b < 8 ; b++)
 		{
-			_putchar(a[i][j]);
+			_putchar(*((*a + i * 8) + b));
 		}
 		_putchar('\n');
 	}
 }
+
