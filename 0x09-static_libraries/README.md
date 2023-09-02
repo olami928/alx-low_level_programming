@@ -1,1 +1,1 @@
-A new tasking project under this repo
+This is anew project under this repo
