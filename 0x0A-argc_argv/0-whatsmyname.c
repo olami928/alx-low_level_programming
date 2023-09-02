@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#include "main.h"
 /**
  * main - this program prints its name.
  * @argv: an array of string containing the argument
