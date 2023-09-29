@@ -1,10 +1,7 @@
 #include "main.h"
 /**
- * author - dimeji
- * projrct - recursion
- */
-/**
- *  _puts_recursion - function like puts()
+ * _puts_recursion - puts s to standard output
+ * @s: string
  * Return: On success 1.
  * On error, -1 is returned, and errno is set appropriately.
  */
@@ -16,5 +13,7 @@ void _puts_recursion(char *s)
 		_puts_recursion(s + 1);
 	}
 	else
+	{
 		_putchar('\n');
+	}
 }
