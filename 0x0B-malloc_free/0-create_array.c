@@ -4,7 +4,7 @@
  * a specific char
  * @c: the address of memory to print
  * @size: the size of memory to print
- * return (0); Always
+ * Return: 0 on success
  */
 char *create_array(unsigned int size, char c)
 {
