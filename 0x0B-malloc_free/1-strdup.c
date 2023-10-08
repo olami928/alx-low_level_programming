@@ -2,8 +2,7 @@
 /**
  * _strdup - duplicates a string
  * @str: the string to be duplicated
- * return: Pointer to the duplicated string, or NULL if insufficient  memory
- * is avaliable.
+ * Return: 0 on success
  */
 char *_strdup(char *str)
 {
