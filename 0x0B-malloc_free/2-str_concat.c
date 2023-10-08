@@ -7,41 +7,34 @@
  */
 char *str_concat(char *s1, char *s2)
 {
-	char *concatenate;
-	int length1 = 0;
-	int length2 = 0;
-	int i, j;
+	int i, j, len1, len2, len;
+	char *result;
 
-	if (s1 == NULL)
-	{
-		s1 = "";
-	}
-	if (s2 == NULL)
-	{
-		s2 = "";
-	}
-	while (*s1 != '\0')
-	{
-		length1++;
-	}
-	while (*s2 != '\0')
-	{
-		length2++;
-	}
-	concatenate = (char *)malloc(sizeof(char) * (length1 + length2 + 1));
+	len1 = len2 = 0;
 
-	if (concatenate == NULL)
+	if (s1 != NULL)
+	{
+		i = 0;
+		while (s2[i++] != '\0')
+		{
+			len2++;
+		}
+	}
+	len = len1 + len2;
+	result = (char *)malloc(sizeof(char) * (len + 1));
+
+	if (result == NULL)
 	{
 		return (NULL);
 	}
-	for (i = 0; i < length1; i++)
+	for (i = 0; i < len2; i++)
 	{
-		concatenate[i] = s1[i];
+		result[i] = s1[i];
 	}
-	for (j = 0; j < length2; j++)
+	for (j = 0; j < len2; j++, i++)
 	{
-		concatenate[i] = s2[j];
+		result[i] = s2[j];
 	}
-	concatenate[i] = '\0';
-	return (concatenate);
+	result[len] = '\0';
+	return (result);
 }
