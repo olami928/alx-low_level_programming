@@ -1,59 +1,32 @@
-#include <stdlib.h>
 #include "main.h"
-
 /**
- *  * *array_range - creates an array of integers
- *   * @min: minimum range of values stored
- *    * @max: maximum range of values stored and number of elements
- *     *
- *      * Return: pointer to the new array
- *       */
+ * array_range - Function create an array of integers.
+ * @min: starting number.
+ * @max: ending number.
+ * Return: 0 on success
+ */
 int *array_range(int min, int max)
 {
-		int *ptr;
-			int i, size;
+	int b;
+	int *arr;
 
-				if (min > max)
-							return (NULL);
+	if (min > max)
+	{
+		return (NULL);
+	}
+	b = max - min;
+	arr = (int *)malloc(sizeof(int) * (b + 1));
 
-					size = max - min + 1;
-
-						ptr = malloc(sizeof(int) * size);
-
-							if (ptr == NULL)
-										return (NULL);
-
-								for (i = 0; min <= max; i++)
-											ptr[i] = min++;
-
-									return (ptr);
-}#include <stdlib.h>
-#include "main.h"
-
-/**
- *  * *array_range - creates an array of integers
- *   * @min: minimum range of values stored
- *    * @max: maximum range of values stored and number of elements
- *     *
- *      * Return: pointer to the new array
- *       */
-int *array_range(int min, int max)
-{
-		int *ptr;
-			int i, size;
-
-				if (min > max)
-							return (NULL);
-
-					size = max - min + 1;
-
-						ptr = malloc(sizeof(int) * size);
-
-							if (ptr == NULL)
-										return (NULL);
-
-								for (i = 0; min <= max; i++)
-											ptr[i] = min++;
-
-									return (ptr);
+	if (!arr)
+	{
+		return (NULL);
+	}
+	while (max > min)
+	{
+		arr[b] = max;
+		b--;
+		max--;
+	}
+	arr[b] = min;
+	return (arr);
 }
