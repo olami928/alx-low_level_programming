@@ -1,1 +1,1 @@
-This is a newe project on if, else, while.
+This is a new project under this repo
