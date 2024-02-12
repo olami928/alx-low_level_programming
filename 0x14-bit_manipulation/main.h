@@ -9,4 +9,5 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m);
 int get_endianness(void);
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #endif /*MAIN_H*/
