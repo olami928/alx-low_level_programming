@@ -29,7 +29,7 @@ unsigned int binary_to_uint(const char *b)
 		{
 			return (0);
 		}
-		for (j = len - 1; j >= 0; j--)
+		for (j = len - 1; j > 0; j--)
 		pow = pow * base;
 		sum = sum + (pow * (b[i] - 48));
 		len--;
